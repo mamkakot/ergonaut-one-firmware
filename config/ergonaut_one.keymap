@@ -21,6 +21,35 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        tg_qwerty {
+            bindings = <&tog 1>;
+            key-positions = <24 25 26>;
+        };
+
+        copy {
+            bindings = <&kp LG(K_COPY)>;
+            key-positions = <27 26>;
+        };
+
+        paste {
+            bindings = <&kp K_PASTE>;
+            key-positions = <27 28>;
+        };
+
+        cut {
+            bindings = <&kp K_CUT>;
+            key-positions = <26 28>;
+        };
+
+        undo {
+            bindings = <&kp K_UNDO>;
+            key-positions = <24 25>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
