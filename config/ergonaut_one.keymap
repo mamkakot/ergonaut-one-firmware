@@ -25,7 +25,7 @@
         compatible = "zmk,combos";
 
         tg_qwerty {
-            bindings = <&tog 1>;
+            bindings = <&change_lang>;
             key-positions = <24 25 26>;
         };
 
