@@ -30,22 +30,22 @@
         };
 
         copy {
-            bindings = <&kp LG(K_COPY)>;
+            bindings = <&kp LG(C)>;
             key-positions = <27 26>;
         };
 
         paste {
-            bindings = <&kp K_PASTE>;
+            bindings = <&kp LG(V)>;
             key-positions = <27 28>;
         };
 
         cut {
-            bindings = <&kp K_CUT>;
+            bindings = <&kp LG(X)>;
             key-positions = <26 28>;
         };
 
         undo {
-            bindings = <&kp K_UNDO>;
+            bindings = <&kp LG(Z)>;
             key-positions = <25 26>;
         };
     };
@@ -54,7 +54,7 @@
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp LG(SPACE)>;
+            bindings = <&tog 1 &kp LC(SPACE)>;
             label = "CHANGE_LANG";
         };
     };
