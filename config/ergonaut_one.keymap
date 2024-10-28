@@ -54,7 +54,7 @@
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
+            bindings = <&tog 1 &kp LC(SPACE)>;
             label = "CHANGE_LANG";
         };
     };
