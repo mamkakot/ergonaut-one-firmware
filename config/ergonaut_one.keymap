@@ -26,7 +26,7 @@
 
         tg_qwerty {
             bindings = <&change_lang>;
-            key-positions = <24 25 26>;
+            key-positions = <25 26 27>;
         };
 
         copy {
@@ -46,7 +46,7 @@
 
         undo {
             bindings = <&kp K_UNDO>;
-            key-positions = <24 25>;
+            key-positions = <25 26>;
         };
     };
 
