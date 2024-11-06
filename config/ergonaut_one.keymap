@@ -40,13 +40,23 @@
         };
 
         cut {
-            bindings = <&kp LG(X)>;
+            bindings = <&kp LC(X)>;
             key-positions = <26 28>;
         };
 
         undo {
-            bindings = <&kp LG(Z)>;
+            bindings = <&kp LC(Z)>;
             key-positions = <25 26>;
+        };
+
+        close_tab {
+            bindings = <&kp LC(W)>;
+            key-positions = <1 2>;
+        };
+
+        close_app {
+            bindings = <&kp LC(Q)>;
+            key-positions = <1 2 0>;
         };
     };
 
@@ -56,6 +66,13 @@
             #binding-cells = <0>;
             bindings = <&tog 1 &kp LC(SPACE)>;
             label = "CHANGE_LANG";
+        };
+
+        komandor_password: komandozorniy_password {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LS(K) &kp O &kp M &kp N6 &kp N8 &kp N4 &kp D &kp O &kp R &kp EXCL>;
+            label = "KOMANDOZORNIY_PASSWORD";
         };
     };
 
@@ -82,10 +99,10 @@
 
         lower {
             bindings = <
-&trans  &trans  &kp HOME  &kp UP    &kp END    &trans  &kp C_VOL_UP  &kp N7        &kp N8        &kp N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
-&trans  &trans  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                &mt RCTRL C_PP
-&trans  &trans  &trans    &kp CAPS  &trans     &trans  &kp C_VOL_DN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
-                          &trans    &trans     &trans  &trans        &trans        &trans
+&trans  &trans              &kp HOME  &kp UP    &kp END    &trans  &kp C_VOL_UP  &kp N7        &kp N8        &kp N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
+&trans  &komandor_password  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                &mt RCTRL C_PP
+&trans  &trans              &trans    &kp CAPS  &trans     &trans  &kp C_VOL_DN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
+                                      &trans    &trans     &trans  &trans        &trans        &trans
             >;
         };
 
