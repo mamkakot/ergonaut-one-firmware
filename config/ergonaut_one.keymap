@@ -58,13 +58,18 @@
             bindings = <&kp LC(Q)>;
             key-positions = <1 2 0>;
         };
+
+        scuko {
+            bindings = <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
+            key-positions = <4 5>;
+        };
     };
 
     macros {
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp LC(SPACE)>;
+            bindings = <&tog 1 &kp LG(SPACE)>;
             label = "CHANGE_LANG";
         };
 
