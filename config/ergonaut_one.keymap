@@ -9,15 +9,18 @@
 
 &lt { quick-tap-ms = <200>; };
 
-&mt { quick-tap-ms = <200>; };
+&mt {
+    quick-tap-ms = <200>;
+    flavor = "balanced";
+};
 
 / {
     conditional_layers {
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <3 2>;
-            then-layer = <4>;
+            if-layers = <4 3>;
+            then-layer = <5>;
         };
     };
 
@@ -69,7 +72,7 @@
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 1 &kp LG(SPACE)>;
+            bindings = <&tog 2 &kp LG(SPACE)>;
             label = "CHANGE_LANG";
         };
 
@@ -78,6 +81,13 @@
             #binding-cells = <0>;
             bindings = <&kp LS(K) &kp O &kp M &kp N6 &kp N8 &kp N4 &kp D &kp O &kp R &kp EXCL>;
             label = "KOMANDOZORNIY_PASSWORD";
+        };
+
+        macos_carlique: macos_carlique {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&bt BT_SEL 1 &tog 1>;
+            label = "MACOS_CARLIQUE";
         };
     };
 
@@ -89,7 +99,16 @@
 &mt LGUI RBKT    &kp Q  &kp W  &kp F      &kp P                  &kp B        &kp J        &kp L                      &kp U      &kp Y    &kp SEMI  &mt LEFT_GUI LEFT_BRACKET
 &mt LCTRL GRAVE  &kp A  &kp R  &kp S      &kp T                  &kp G        &kp K        &kp N                      &kp E      &kp I    &kp O     &mt RCTRL SQT
 &mt LALT MINUS   &kp Z  &kp X  &kp C      &kp D                  &kp V        &kp M        &kp H                      &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
-                               &lt 3 TAB  &mt LEFT_SHIFT ESCAPE  &lt 2 SPACE  &lt 2 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 3 DEL
+                               &lt 4 TAB  &mt LEFT_SHIFT ESCAPE  &lt 3 SPACE  &lt 3 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 4 DEL
+            >;
+        };
+
+        carlique {
+            bindings = <
+&mt LCTRL RIGHT_BRACKET  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LCTRL LEFT_BRACKET
+&mt LGUI GRAVE           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LGUI SQT
+&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -122,10 +141,10 @@
 
         adjust_layer {
             bindings = <
-&bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
-&sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
-                                         &trans        &none         &trans        &none         &trans        &trans
+&bootloader  &none         &none            &none         &none         &none         &none         &none         &none         &none            &none         &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &macos_carlique  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &macos_carlique  &bt BT_SEL 0  &bt BT_CLR
+&sys_reset   &none         &none            &none         &none         &none         &none         &none         &none         &none            &none         &sys_reset
+                                            &trans        &none         &trans        &none         &trans        &trans
             >;
         };
     };
