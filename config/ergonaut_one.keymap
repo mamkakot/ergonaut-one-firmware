@@ -17,11 +17,11 @@
 / {
     behaviors {
         as_ht: autoshift_hold_tap {
-          compatible = "zmk,behavior-hold-tap";
-          label = "AUTOSHIFT_HOLD_TAP";
-          #binding-cells = <2>;
-          tapping-term-ms = <200>;
-          bindings = <&shifted>, <&kp>;
+            compatible = "zmk,behavior-hold-tap";
+            label = "AUTOSHIFT_HOLD_TAP";
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+            bindings = <&shifted>, <&kp>;
         };
     };
 
@@ -72,8 +72,8 @@
             key-positions = <1 2 0>;
         };
 
-        scuko {
-            bindings = <&kp C_AC_NEXT_KEYBOARD_LAYOUT_SELECT>;
+        caps_word {
+            bindings = <&caps_word>;
             key-positions = <4 5>;
         };
     };
@@ -101,29 +101,28 @@
         };
 
         shifted: macro_shifted_kp {
-          #binding-cells = <1>;
-          label = "MACRO_SHIFTED_KP";
-          compatible = "zmk,behavior-macro-one-param";
-          bindings =
-            <&macro_press &kp LSHFT>,
-            <&macro_param_1to1 &macro_tap &kp MACRO_PLACEHOLDER>,
-            <&macro_release &kp LSHFT>;
+            #binding-cells = <1>;
+            label = "MACRO_SHIFTED_KP";
+            compatible = "zmk,behavior-macro-one-param";
+            bindings =
+                <&macro_press>,
+                <&kp LSHFT &macro_param_1to1>,
+                <&macro_tap>,
+                <&kp MACRO_PLACEHOLDER>,
+                <&macro_release>,
+                <&kp LSHFT>;
         };
 
         as: autoshift {
-          compatible = "zmk,behavior-macro-one-param";
-          #binding-cells = <1>;
-          label = "AUTOSHIFT_KP";
-          bindings =
-            <&macro_press>,
-            <&macro_param_1to1>,
-            <&macro_param_1to2>,
-            <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
-            <&macro_pause_for_release>,
-            <&macro_release>,
-            <&macro_param_1to1>,
-            <&macro_param_1to2>,
-            <&as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
+            compatible = "zmk,behavior-macro-one-param";
+            #binding-cells = <1>;
+            label = "AUTOSHIFT_KP";
+            bindings =
+                <&macro_press>,
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>,
+                <&macro_pause_for_release>,
+                <&macro_release>,
+                <&macro_param_1to1 &macro_param_1to2 &as_ht MACRO_PLACEHOLDER MACRO_PLACEHOLDER>;
         };
     };
 
@@ -159,9 +158,9 @@
 
         lower {
             bindings = <
-&trans  &trans              &kp HOME  &kp UP    &kp END    &trans  &kp C_VOL_UP  &kp N7        &kp N8        &kp N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
-&trans  &komandor_password  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp N0                &mt RCTRL C_PP
-&trans  &trans              &trans    &kp CAPS  &trans     &trans  &kp C_VOL_DN  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
+&trans  &trans              &kp HOME  &kp UP    &kp END    &trans  &kp C_VOL_UP  &as N7        &as N8        &as N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
+&trans  &komandor_password  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &kp N0                &mt RCTRL C_PP
+&trans  &trans              &trans    &kp CAPS  &trans     &trans  &kp C_VOL_DN  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
                                       &trans    &trans     &trans  &trans        &trans        &trans
             >;
         };
