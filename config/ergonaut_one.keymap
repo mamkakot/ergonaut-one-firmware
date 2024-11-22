@@ -158,10 +158,10 @@
 
         lower {
             bindings = <
-&trans  &trans              &kp HOME  &kp UP    &kp END    &trans  &kp C_VOL_UP  &as N7        &as N8        &as N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
-&trans  &komandor_password  &kp LEFT  &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &kp N0                &mt RCTRL C_PP
-&trans  &trans              &trans    &kp CAPS  &trans     &trans  &kp C_VOL_DN  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
-                                      &trans    &trans     &trans  &trans        &trans        &trans
+&trans  &trans              &kp HOME         &kp UP    &kp END    &trans  &kp C_VOL_UP  &as N7        &as N8        &as N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
+&trans  &komandor_password  &kp LEFT         &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &kp N0                &mt RCTRL C_PP
+&trans  &trans              &as PRINTSCREEN  &kp CAPS  &trans     &trans  &kp C_VOL_DN  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
+                                             &trans    &trans     &trans  &trans        &trans        &trans
             >;
         };
 
