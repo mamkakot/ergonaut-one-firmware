@@ -133,10 +133,10 @@
 
         colemak {
             bindings = <
-&mt LGUI RBKT    &kp Q       &kp W       &kp F        &kp P                  &kp B        &kp J        &kp L                      &kp U        &kp Y       &kp SEMI    &mt LEFT_GUI LEFT_BRACKET
-&mt LCTRL GRAVE  &mt LGUI A  &mt LALT R  &mt LCTRL S  &mt LEFT_SHIFT T       &kp G        &kp K        &mt LSHIFT N               &mt LCTRL E  &mt LALT I  &mt LGUI O  &mt RCTRL SQT
-&mt LALT MINUS   &kp Z       &kp X       &kp C        &kp D                  &kp V        &kp M        &kp H                      &kp COMMA    &kp DOT     &kp FSLH    &mt RALT BSLH
-                                         &lt 4 TAB    &mt LEFT_SHIFT ESCAPE  &lt 3 SPACE  &lt 3 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 4 DEL
+&mt LGUI RIGHT_BRACKET  &kp Q  &kp W  &kp F      &kp P                  &kp B        &kp J        &kp L                      &kp U      &kp Y    &kp SEMI  &mt LEFT_GUI LEFT_BRACKET
+&mt LCTRL GRAVE         &kp A  &kp R  &kp S      &kp T                  &kp G        &kp K        &kp N                      &kp E      &kp I    &kp O     &mt RCTRL SINGLE_QUOTE
+&mt LALT MINUS          &kp Z  &kp X  &kp C      &kp D                  &kp V        &kp M        &kp H                      &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
+                                      &lt 4 TAB  &mt LEFT_SHIFT ESCAPE  &lt 3 SPACE  &lt 3 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 4 DEL
             >;
         };
 
@@ -151,19 +151,19 @@
 
         qwerty {
             bindings = <
-&trans  &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P     &trans
-&trans  &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI  &trans
-&trans  &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp FSLH  &trans
-                      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp Q       &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P     &trans
+&trans  &mt LGUI A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI  &trans
+&trans  &kp Z       &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp FSLH  &trans
+                           &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
-        lower {
+        nav {
             bindings = <
-&trans  &trans              &kp HOME         &kp UP    &kp END    &trans  &kp C_VOL_UP  &as N7        &as N8        &as N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
-&trans  &komandor_password  &kp LEFT         &kp DOWN  &kp RIGHT  &trans  &kp C_MUTE    &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &kp N0                &mt RCTRL C_PP
-&trans  &trans              &as PRINTSCREEN  &kp CAPS  &trans     &trans  &kp C_VOL_DN  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
-                                             &trans    &trans     &trans  &trans        &trans        &trans
+&trans  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END        &trans   &kp C_VOL_UP  &as N7        &as N8        &as N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
+&trans  &kp LEFT      &kp UP       &kp DOWN       &kp RIGHT      &kp INS  &kp C_MUTE    &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &as N0                &mt RCTRL C_PP
+&trans  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)  &trans   &kp C_VOL_DN  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
+                                   &trans         &trans         &trans   &trans        &trans        &trans
             >;
         };
 
@@ -176,21 +176,12 @@
             >;
         };
 
-        adjust_layer {
+        bt {
             bindings = <
 &bootloader  &none         &none            &none         &none         &none         &none         &none         &none         &none            &none         &bootloader
 &bt BT_CLR   &bt BT_SEL 0  &macos_carlique  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &macos_carlique  &bt BT_SEL 0  &bt BT_CLR
 &sys_reset   &none         &none            &none         &none         &none         &none         &none         &none         &none            &none         &sys_reset
                                             &trans        &none         &trans        &none         &trans        &trans
-            >;
-        };
-
-        nav {
-            bindings = <
-&trans  &trans    &trans    &trans     &trans     &trans  &kp LC(RS(Z))  &kp LC(V)  &kp LC(C)      &kp LC(X)    &kp LC(Z)  &trans
-&trans  &kp LGUI  &kp LALT  &kp RCTRL  &kp RSHFT  &trans  &kp CAPSLOCK   &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
-&trans  &trans    &trans    &trans     &trans     &trans  &kp INS        &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp TAB
-                            &trans     &trans     &trans  &trans         &trans     &trans
             >;
         };
 
@@ -200,6 +191,15 @@
 &trans  &kp LGUI  &kp LALT  &kp RCTRL  &kp RSHFT  &trans  &none          &kp LEFT   &kp DOWN       &kp UP       &kp RIGHT  &trans
 &trans  &trans    &trans    &trans     &trans     &trans  &none          &kp HOME   &kp PAGE_DOWN  &kp PAGE_UP  &kp END    &kp TAB
                             &trans     &trans     &trans  &mkp MB1       &mkp MB2   &mkp MB3
+            >;
+        };
+
+        fun {
+            bindings = <
+&trans  &kp F12  &kp F7  &kp F8  &kp F9  &kp PRINTSCREEN  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F11  &kp F4  &kp F5  &kp F6  &kp SCROLLLOCK   &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp F10  &kp F1  &kp F2  &kp F3  &kp PAUSE_BREAK  &trans  &trans  &trans  &trans  &trans  &trans
+                         &trans  &trans  &trans           &trans  &trans  &trans
             >;
         };
     };
