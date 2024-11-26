@@ -142,10 +142,10 @@
 
         carlique {
             bindings = <
-&mt LCTRL RIGHT_BRACKET  &trans       &trans  &trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans       &mt LCTRL LEFT_BRACKET
-&mt LGUI GRAVE           &mt LCTRL A  &trans  &mt S LGUI  &trans  &trans  &trans  &trans  &mt LGUI E  &trans  &mt LCTRL O  &mt LGUI SQT
-&trans                   &trans       &trans  &trans      &trans  &trans  &trans  &trans  &trans      &trans  &trans       &trans
-                                              &trans      &trans  &trans  &trans  &trans  &trans
+&mt LCTRL RIGHT_BRACKET  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LCTRL LEFT_BRACKET
+&mt LGUI GRAVE           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LGUI SQT
+&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+                                         &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
