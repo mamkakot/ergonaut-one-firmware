@@ -11,7 +11,7 @@
 
 &mt {
     quick-tap-ms = <100>;
-    flavor = "tap-preferred";
+    flavor = "balanced";
     tapping-term-ms = <170>;
 };
 
@@ -159,19 +159,19 @@
 
         nav {
             bindings = <
-&trans  &kp LG(LEFT)  &kp LG(UP)       &kp LG(DOWN)       &kp LG(RIGHT)  &trans   &kp C_VOL_UP  &as N7        &as N8        &as N9        &kp C_BRIGHTNESS_INC  &kp C_NEXT
-&trans  &kp LEFT      &kp UP           &kp DOWN           &kp RIGHT      &kp INS  &kp C_MUTE    &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &as N0                &mt RCTRL C_PP
-&trans  &kp LG(HOME)  &kp LG(PAGE_UP)  &kp LG(PAGE_DOWN)  &kp LG(END)    &trans   &kp C_VOL_DN  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &kp C_BRIGHTNESS_DEC  &kp C_PREV
-                                       &trans             &trans         &trans   &trans        &trans        &trans
+&trans  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)  &kp LC(TAB)  &kp PLUS   &as N7        &as N8        &as N9        &komandor_password  &trans
+&trans  &kp LEFT      &kp UP       &kp DOWN       &kp RIGHT      &kp LA(TAB)  &kp EQUAL  &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &as N0              &trans
+&trans  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END        &kp LG(TAB)  &kp MINUS  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &trans              &trans
+                                   &trans         &trans         &trans       &trans     &trans        &trans
             >;
         };
 
         raise {
             bindings = <
-&trans  &trans  &kp LESS_THAN         &kp EQUAL     &kp GREATER_THAN       &trans  &kp PRINTSCREEN  &kp F3  &kp F6  &kp F9  &kp F12  &trans
-&trans  &trans  &kp LEFT_PARENTHESIS  &kp MINUS     &kp RIGHT_PARENTHESIS  &trans  &trans           &kp F2  &kp F5  &kp F8  &kp F11  &trans
-&trans  &trans  &kp KP_MULTIPLY       &kp LS(SEMI)  &kp QUESTION           &trans  &trans           &kp F1  &kp F4  &kp F7  &kp F10  &trans
-                                      &trans        &trans                 &trans  &trans           &trans  &trans
+&trans  &trans  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_NEXT      &trans  &trans  &kp F3  &kp F6  &kp F9  &kp F12  &trans
+&trans  &trans  &trans                &kp C_MUTE         &kp C_PP        &trans  &trans  &kp F2  &kp F5  &kp F8  &kp F11  &trans
+&trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_PREVIOUS  &trans  &trans  &kp F1  &kp F4  &kp F7  &kp F10  &trans
+                                      &trans             &trans          &trans  &trans  &trans  &trans
             >;
         };
 
