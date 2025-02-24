@@ -87,13 +87,6 @@
             label = "CHANGE_LANG";
         };
 
-        komandor_password: komandozorniy_password {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LS(K) &kp O &kp M &kp N6 &kp N8 &kp N4 &kp D &kp O &kp R &kp EXCL>;
-            label = "KOMANDOZORNIY_PASSWORD";
-        };
-
         macos_carlique: macos_carlique {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -159,18 +152,18 @@
 
         nav {
             bindings = <
-&trans  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)  &kp LC(TAB)  &kp PLUS   &as N7        &as N8        &as N9        &komandor_password  &trans
-&trans  &kp LEFT      &kp UP       &kp DOWN       &kp RIGHT      &kp LA(TAB)  &kp EQUAL  &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &as N0              &trans
-&trans  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END        &kp LG(TAB)  &kp MINUS  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &trans              &trans
+&trans  &kp LG(LEFT)  &kp LG(UP)   &kp LG(DOWN)   &kp LG(RIGHT)  &kp LC(TAB)  &kp PLUS   &as N7        &as N8        &as N9        &trans  &trans
+&trans  &kp LEFT      &kp UP       &kp DOWN       &kp RIGHT      &kp LA(TAB)  &kp EQUAL  &as NUMBER_4  &as NUMBER_5  &as NUMBER_6  &as N0  &trans
+&trans  &kp HOME      &kp PAGE_UP  &kp PAGE_DOWN  &kp END        &kp LG(TAB)  &kp MINUS  &as NUMBER_1  &as NUMBER_2  &as NUMBER_3  &trans  &trans
                                    &trans         &trans         &trans       &trans     &trans        &trans
             >;
         };
 
         raise {
             bindings = <
-&trans  &trans  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_NEXT      &trans  &trans  &kp F3  &kp F6  &kp F9  &kp F12  &trans
-&trans  &trans  &kp PRINTSCREEN       &kp C_MUTE         &kp C_PP        &trans  &trans  &kp F2  &kp F5  &kp F8  &kp F11  &trans
-&trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_PREVIOUS  &trans  &trans  &kp F1  &kp F4  &kp F7  &kp F10  &trans
+&trans  &trans  &kp C_BRIGHTNESS_INC  &kp C_VOLUME_UP    &kp C_NEXT      &trans  &trans  &kp F7  &kp F8  &kp F9  &kp F12  &trans
+&trans  &trans  &kp PRINTSCREEN       &kp C_MUTE         &kp C_PP        &trans  &trans  &kp F4  &kp F5  &kp F6  &kp F11  &trans
+&trans  &trans  &kp C_BRIGHTNESS_DEC  &kp C_VOLUME_DOWN  &kp C_PREVIOUS  &trans  &trans  &kp F1  &kp F2  &kp F3  &kp F10  &trans
                                       &trans             &trans          &trans  &trans  &trans  &trans
             >;
         };
