@@ -30,8 +30,8 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <4 3>;
-            then-layer = <5>;
+            if-layers = <3 2>;
+            then-layer = <4>;
         };
     };
 
@@ -83,7 +83,7 @@
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 2 &kp LG(SPACE)>;
+            bindings = <&tog 0 &kp LG(SPACE)>;
             label = "CHANGE_LANG";
         };
 
@@ -123,12 +123,12 @@
     keymap {
         compatible = "zmk,keymap";
 
-        colemak {
+        qwerty {
             bindings = <
-&mt LGUI RIGHT_BRACKET  &kp Q  &kp W  &kp F      &kp P                  &kp B        &kp J        &kp L                      &kp U      &kp Y    &kp SEMI  &mt LEFT_GUI LEFT_BRACKET
-&mt LCTRL GRAVE         &kp A  &kp R  &kp S      &kp T                  &kp G        &kp K        &kp N                      &kp E      &kp I    &kp O     &mt RCTRL SINGLE_QUOTE
-&mt LALT MINUS          &kp Z  &kp X  &kp C      &kp D                  &kp V        &kp M        &kp H                      &kp COMMA  &kp DOT  &kp FSLH  &mt RALT BSLH
-                                      &lt 4 TAB  &mt LEFT_SHIFT ESCAPE  &lt 3 SPACE  &lt 3 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 4 DEL
+&mt LEFT_META RIGHT_BRACKET  &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P     &mt LMETA LEFT_BRACKET
+&mt LCTRL GRAVE              &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI  &mt LCTRL SQT
+&mt LEFT_ALT MINUS           &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp FSLH  &mt LEFT_ALT BACKSLASH
+                                           &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
@@ -138,15 +138,6 @@
 &mt LGUI GRAVE           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LGUI SQT
 &trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
                                          &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
-        qwerty {
-            bindings = <
-&trans  &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P     &trans
-&trans  &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI  &trans
-&trans  &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp FSLH  &trans
-                      &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
 
