@@ -63,16 +63,6 @@
             key-positions = <25 26>;
         };
 
-        close_tab {
-            bindings = <&kp LC(W)>;
-            key-positions = <1 0>;
-        };
-
-        close_app {
-            bindings = <&kp LC(Q)>;
-            key-positions = <1 2 0>;
-        };
-
         caps_word {
             bindings = <&caps_word>;
             key-positions = <4 5>;
@@ -83,7 +73,7 @@
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&tog 0 &kp LG(SPACE)>;
+            bindings = <&kp LG(SPACE)>;
             label = "CHANGE_LANG";
         };
 
@@ -125,10 +115,10 @@
 
         qwerty {
             bindings = <
-&mt LEFT_META RIGHT_BRACKET  &kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O       &kp P     &mt LMETA LEFT_BRACKET
-&mt LCTRL GRAVE              &kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L       &kp SEMI  &mt LCTRL SQT
-&mt LEFT_ALT MINUS           &kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp PERIOD  &kp FSLH  &mt LEFT_ALT BACKSLASH
-                                           &trans  &trans  &trans  &trans  &trans  &trans
+&mt LEFT_META RIGHT_BRACKET  &kp Q  &kp W  &kp E      &kp R               &kp T        &kp Y        &kp U                     &kp I         &kp O       &kp P     &mt LMETA LEFT_BRACKET
+&mt LCTRL GRAVE              &kp A  &kp S  &kp D      &kp F               &kp G        &kp H        &kp J                     &kp K         &kp L       &kp SEMI  &mt LCTRL SQT
+&mt LEFT_ALT MINUS           &kp Z  &kp X  &kp C      &kp V               &kp B        &kp N        &kp M                     &kp COMMA     &kp PERIOD  &kp FSLH  &mt LEFT_ALT BACKSLASH
+                                           &lt 3 TAB  &mt LEFT_SHIFT ESC  &lt 2 SPACE  &lt 2 ENTER  &mt LEFT_SHIFT BACKSPACE  &lt 3 DELETE
             >;
         };
 
