@@ -136,10 +136,10 @@
 
         media {
             bindings = <
-&bootloader  &trans  &trans  &trans  &trans  &trans  &trans             &trans        &trans        &trans           &trans        &trans
-&trans       &trans  &trans  &trans  &trans  &trans  &ext_power EP_TOG  &kp C_NEXT    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT    &trans
-&sys_reset   &trans  &trans  &trans  &trans  &trans  &out OUT_TOG       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
-                             &trans  &trans  &trans  &kp C_STOP         &kp C_PP      &kp C_MUTE
+&bootloader  &trans    &trans    &trans     &trans     &trans  &trans             &trans        &trans        &trans           &trans        &trans
+&trans       &kp LGUI  &kp LALT  &kp LCTRL  &kp LSHFT  &trans  &ext_power EP_TOG  &kp C_NEXT    &kp C_VOL_DN  &kp C_VOLUME_UP  &kp C_NEXT    &trans
+&sys_reset   &trans    &trans    &trans     &trans     &trans  &out OUT_TOG       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 3     &bt BT_SEL 4  &bt BT_CLR
+                                 &trans     &trans     &trans  &kp C_STOP         &kp C_PP      &kp C_MUTE
             >;
         };
 
