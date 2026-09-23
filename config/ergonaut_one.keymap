@@ -32,8 +32,8 @@
         compatible = "zmk,conditional-layers";
 
         tri-layer {
-            if-layers = <4 2>;
-            then-layer = <5>;
+            if-layers = <3 1>;
+            then-layer = <4>;
         };
     };
 
@@ -46,22 +46,22 @@
         };
 
         copy {
-            bindings = <&kp LC(C)>;
+            bindings = <&kp LG(C)>;
             key-positions = <27 26>;
         };
 
         paste {
-            bindings = <&kp LC(V)>;
+            bindings = <&kp LG(V)>;
             key-positions = <27 28>;
         };
 
         cut {
-            bindings = <&kp LC(X)>;
+            bindings = <&kp LG(X)>;
             key-positions = <26 28>;
         };
 
         undo {
-            bindings = <&kp LC(Z)>;
+            bindings = <&kp LG(Z)>;
             key-positions = <25 26>;
         };
 
@@ -71,7 +71,7 @@
         };
 
         mouse_toggle {
-            bindings = <&tog 3>;
+            bindings = <&tog 2>;
             key-positions = <4 1>;
         };
     };
@@ -80,15 +80,8 @@
         change_lang: change_lang {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(SPACE)>;
+            bindings = <&kp LC(SPACE)>;
             label = "CHANGE_LANG";
-        };
-
-        macos_carlique: macos_carlique {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&bt BT_SEL 1 &tog 1>;
-            label = "MACOS_CARLIQUE";
         };
 
         shifted: macro_shifted_kp {
@@ -125,16 +118,7 @@
 &mt LEFT_META RIGHT_BRACKET  &kp Q  &kp W  &kp E      &kp R               &kp T        &kp Y        &kp U                      &kp I         &kp O       &kp P     &mt LMETA LEFT_BRACKET
 &mt LCTRL GRAVE              &kp A  &kp S  &kp D      &kp F               &kp G        &kp H        &kp J                      &kp K         &kp L       &kp SEMI  &mt LCTRL SQT
 &mt LEFT_ALT MINUS           &kp Z  &kp X  &kp C      &kp V               &kp B        &kp N        &kp M                      &kp COMMA     &kp PERIOD  &kp FSLH  &mt LEFT_ALT BACKSLASH
-                                           &lt 4 TAB  &mt LEFT_SHIFT ESC  &lt 2 SPACE  &lt 2 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 4 DELETE
-            >;
-        };
-
-        carlique {
-            bindings = <
-&mt LCTRL RIGHT_BRACKET  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LCTRL LEFT_BRACKET
-&mt LGUI GRAVE           &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &mt LGUI SQT
-&trans                   &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                                         &trans  &trans  &trans  &trans  &trans  &trans
+                                           &lt 3 TAB  &mt LEFT_SHIFT ESC  &lt 1 SPACE  &lt 1 ENTER  &mt RIGHT_SHIFT BACKSPACE  &lt 3 DELETE
             >;
         };
 
@@ -167,10 +151,10 @@
 
         bt {
             bindings = <
-&bootloader  &none         &none            &none         &none         &none         &none         &none         &none         &none            &none         &bootloader
-&bt BT_CLR   &bt BT_SEL 0  &macos_carlique  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &macos_carlique  &bt BT_SEL 0  &bt BT_CLR
-&sys_reset   &none         &none            &none         &none         &none         &none         &none         &none         &none            &none         &sys_reset
-                                            &trans        &none         &trans        &none         &trans        &trans
+&bootloader  &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &bootloader
+&bt BT_CLR   &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &bt BT_SEL 4  &bt BT_SEL 3  &bt BT_SEL 2  &bt BT_SEL 1  &bt BT_SEL 0  &bt BT_CLR
+&sys_reset   &none         &none         &none         &none         &none         &none         &none         &none         &none         &none         &sys_reset
+                                         &trans        &none         &trans        &none         &trans        &trans
             >;
         };
 
